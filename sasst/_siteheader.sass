@@ -1,0 +1,47 @@
+/*========= Header main =====================*/
+.m-header
+  margin: 0px
+  padding: 0px
+  width: 100%
+  @media screen and ( max-width: 640px)
+    display: none
+  .ls
+    padding-bottom: 10px
+    padding-top: 4px
+    box-sizing: border-box
+    .logo
+      display: block
+      max-width: 300px
+      min-width: 300px
+      height: auto
+      img
+        width: 90%
+        display: block
+        vertical-align: top
+        &:hover
+          @include site_img_hover_opacidad(80,$blanco)
+.m-header
+  .sm
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-end
+    align-items: flex-end
+    align-content: flex-end
+    padding-top: 20px
+    box-sizing: border-box
+    text-align: right
+    .ubicacion
+      text-align: right
+      width: 100%
+      font-family: 'Oswald', sans-serif
+      margin-bottom: 5px
+      margin-right: 11%
+      .icon
+        color: $m-rojo
+        margin-right: 5px
+      .search
+        width: 100%
+        margin: 0px auto
+        padding-top: 5px
+        .searchbar
+          text-align: center

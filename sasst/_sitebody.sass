@@ -1,0 +1,77 @@
+.section-bienvenida
+  width: var(--sizem)
+  padding: 20px
+  background-color: $m-grisclaro
+  .texto-bienvenida
+    text-align: center
+  .i-bienvenida
+    @include tituloafter($m-azul,$m-rojo)
+.con-general
+  background-color: $blanco
+  padding-top: 10px
+  .con
+    margin-bottom: 20px
+    @include imagen100
+    .bread
+      @include bread(none,$blanco)
+/*=========remodelacion=============*/
+.m-remodelacion
+  background-color: $blanco
+  padding: 20px
+  text-align: center
+  .title-recomendacion
+    @include tituloafter($m-azul,$m-rojo)
+  .contenidos-c
+    .thumb
+      display: block
+    .link
+      margin-top: 10px
+      display: block
+/*===================== Entradas recientes cover page ====================*/
+.m-entradas-recientes
+  width: var(--sizem)
+  padding: 20px
+  box-sizing: border-box
+  .titulo-entradas-reciente
+    @include tituloafter($m-azul,$m-rojo)
+  .listado-entradas
+    display: flex
+    flex-flow: row wrap
+    box-sizing: border-box
+    justify-content: center
+    align-items: stretch
+    .lista
+      width: calc(var(--sizem)/4)
+      min-height: 150px
+      text-align: center
+      box-sizing: border-box
+      @media screen and (max-width: 640px) /*.. de 600px a 0px*/
+        width: var(--sizem)
+      a
+        color: $m-azul
+        font-family: 'Oswald', sans-serif
+        text-transform: uppercase
+        font-size: 0.9em
+        text-decoration: none
+        padding: 0px 0px 8px 0px
+        display: block
+        background-color: $blanco
+        margin: 10px
+        &:hover
+          color: $m-rojo
+          transition: 0.5s ease
+          -o-transition: 0.5s ease
+          -webkit-transition: 0.5s ease
+        .texto
+          display: block
+          height: 50px
+          display: flex
+          align-items: center
+          justify-content: center
+        img
+          width: 100%
+          height: 200px
+          background-size: cover
+          &:hover
+            transition: 0.5s ease
+            opacity: 0.5

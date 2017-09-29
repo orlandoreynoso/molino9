@@ -1,0 +1,130 @@
+@media screen and (max-width: 420px)
+	.dropdown-menu > li > a
+		&:hover
+			background-color: $blanco
+			color: $m-rojo
+	.dropdown-menu
+		background-color: $blanco
+		color: $m-rojo
+	.navbar-nav
+		.open
+			background-color: $blanco
+			color: $m-rojo
+	.m-header
+		.ls
+			margin: 0px auto
+			padding: 0px
+			.logo
+				text-align: center
+				img
+					width: 90%
+					margin: 0px auto
+					text-align: center
+					vertical-align: top
+		.sm
+			padding-top: 5px
+			margin-bottom: 10px
+			.ubicacion
+				.icon
+			.search
+				.searchbar
+	.navbar-header
+		display: block
+	nav
+		background-color: $m-verde
+		#cuadro_menu
+			.menu
+				flex-flow: colum wrap
+				li
+					width: 100%
+					a
+						padding: 5px
+					ul
+						display: none
+						background-color: $m-verde
+						position: relative
+						z-index: 900
+					&:hover
+						ul
+							display: block
+	.info-parroquial
+		#iglesia
+			#div1
+				width: 50%
+	.groupings
+		.titulo--groupings
+		.c-agrupaciones
+			flex-flow: column wrap
+			.list
+				width: 100%
+	.recomen
+		.titulo-recomendaciones
+		.c-recomendaciones
+			flex-flow: column wrap
+			.list
+				width: 100%
+@media screen and (max-width: 768px)
+	.m-header
+		.ls
+			margin: 0px auto
+			padding: 0px
+			text-align: center
+			.logo
+				text-align: center
+				margin: 0px  auto
+				img
+					width: 90%
+					margin: 0px auto
+					text-align: center
+					vertical-align: top
+		.sm
+			padding-top: 15px
+			margin-bottom: 10px
+			.ubicacion
+				.icon
+			.search
+				.searchbar
+	.navbar-nav
+		.open
+			background-color: $blanco
+			color: $m-rojo
+	.groupings
+		.titulo--groupings
+		.c-agrupaciones
+			width: 100%
+			.list
+				width: 50%
+	.recomen
+		.titulo-recomendaciones
+		.c-recomendaciones
+			width: 100%
+			.list
+				width: 50%
+	.navbar-header
+		display: block
+@media screen and (max-width: 800px)
+	.groupings
+		.titulo--groupings
+		.c-agrupaciones
+			width: 100%
+			.list
+				width: 50%
+	.recomen
+		.titulo-recomendaciones
+		.c-recomendaciones
+			width: 100%
+			.list
+				width: 50%
+@media screen and (max-width: 980px)
+	.groupings
+		.titulo--groupings
+		.c-agrupaciones
+			width: 100%
+			.list
+				width: 50%
+	.recomen
+		.titulo-recomendaciones
+		.c-recomendaciones
+			width: 100%
+			.list
+				width: 50%

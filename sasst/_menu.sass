@@ -1,0 +1,104 @@
+.e-menu
+	background-color: $m-rojo
+	width: 100%
+	padding: 5px
+	.row
+		padding: 0px
+		margin: 0px
+.navbar-header
+	display: none
+.navbar-default
+	background-color: $m-rojo
+	.navbar-toggle
+		.icon-bar
+			color: $blanco
+			background-color: $blanco
+		&:hover,
+		&:focus
+			background-color: $blanco
+			color: $m-rojo
+			.icon-bar
+				color: $m-rojo
+				background-color: $m-rojo
+	.navbar-brand
+		color: $blanco
+	.navbar-nav > li > a
+		background-color: $m-rojo
+		color: $blanco
+		li
+			a
+				&:focus
+					color: $blanco
+					background-color: $m-rojo
+		&:hover
+			background-color: $blanco
+			color: $m-rojo
+		&:focus
+			color: $blanco
+			background-color: transparent
+	.navbar-nav > .active > a:focus,
+	.navbar-nav > .active > a:hover
+		color: $m-rojo
+		background-color: $blanco
+	.navbar-nav > .open > a:focus,
+	.navbar-nav > .open > a:hover
+		background-color: $blanco
+		color: $m-rojo
+.navbar
+	border: none
+	padding: 0px
+	margin: 0px
+nav
+	padding: 20px
+	width: 100%
+	#cuadro_menu
+		background-color: $m-rojo
+		.menu
+			display: -webkit-box
+			display: -webkit-flex
+			display: -ms-flexbox
+			display: flex
+			-webkit-box-pack: justify
+			-webkit-justify-content: space-between
+			-ms-flex-pack: justify
+			justify-content: space-between
+			-webkit-box-align: center
+			-webkit-align-items: center
+			-ms-flex-align: center
+			align-items: center
+			-webkit-flex-flow: row wrap
+			-ms-flex-flow: row wrap
+			flex-flow: row wrap
+			font-family: 'Oswald', sans-serif
+			text-transform: uppercase
+			margin: 0px
+			padding: 0px
+			background-color: #d53132
+			li
+				list-style: none
+				margin: 0px
+				padding: 0px
+				transition: 0.5s ease
+				-o-transition: 0.5s ease
+				-webkit-transition: 0.5s ease
+				a
+					color: #ffffff
+					text-decoration: none
+					padding: 18px 10px 18px 10px
+					display: block
+					&:hover
+						color: #333333
+						transition: 0.5s ease
+						-o-transition: 0.5s ease
+						-webkit-transition: 0.5s ease
+						background-color: #ffffff
+				ul
+					display: none
+					background-color: $m-verde
+					position: absolute
+					z-index: 900
+				&:hover
+					ul
+						display: block
+
+/*--*/

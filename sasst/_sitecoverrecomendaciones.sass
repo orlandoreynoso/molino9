@@ -1,0 +1,71 @@
+.m-recomendaciones .titulo-recomendaciones
+  text-align: center
+  padding: 0px 0px 30px 0px
+/*=================== AGrupaciones ===================================================*/
+.msc-agrupaciones
+  background-color: $m-azul
+  padding: 30px
+  .titulo--groupings
+    text-align: center
+    padding: 0px 0px 30px 0px
+    h3
+      font-size: 1.2em
+      color: $celeste
+      text-transform: uppercase
+      font-family: 'Oswald', sans-serif
+      margin: 30px 0px 20px 0px
+      padding: 0px
+      font-weight: 400
+  .c-agrupaciones
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    box-sizing: border-box
+    .list
+      width: 20%
+      padding: 10px
+      box-sizing: border-box
+      @media screen and (max-width: 640px)
+        width: 100%
+      @media screen and (max-width: 768px)
+        width: 33%
+      @media screen and (max-width: 480px)
+        width: 100%
+      @media screen and (max-width: 360px)
+        width: 100%
+      .todo
+        width: 100%
+        height: 100%
+        transition: 0.5s ease
+        overflow: hidden
+        &:hover
+          border-bottom: 1px solid $m-hueso
+        .ir-agrupacion
+          padding: 5px
+          display: block
+          height: 100%
+          text-decoration: none
+          transition: 0.5s ease
+          &:hover
+            color: $m-amarillo
+            h5
+              color: $m-amarillo
+          h5
+            font-size: 1em
+            line-height: 1.5em
+            font-family: 'Open Sans', Arial, sans-serif
+            margin-left: 5px
+            font-weight: 600
+            color: $celeste
+            a
+              color: $m-hueso
+          .thumb
+            width: 100%
+            height: 125px
+            display: block
+            @include m_img
+            @media screen and (max-width: 640px)
+              height: auto
+              width: 100%
+        .exe
+          margin-top: 10px

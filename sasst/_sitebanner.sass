@@ -1,0 +1,41 @@
+.slide
+  width: 100%
+  margin: 0px auto
+  padding: 0px
+  box-sizing: border-box
+  overflow: hidden
+  background-color: $blanco
+  .metaslider
+    box-sizing: border-box
+    margin: 0px auto
+    text-align: center
+    min-height: 100%
+    max-width: 100%
+    min-width: 100%
+    .slides
+      @media screen and (max-width: 640px)
+        img
+          min-height: 100%
+    .flexslider
+      padding: 0px
+      margin: 0px
+      background-color: green
+      .flex-control-nav
+        padding: 20px
+        background-color: rgba($blanco,0.5)
+        width: 100%
+        bottom: 0px
+        z-index: 100
+        height: auto
+        @media screen and (max-width: 640px)
+          display: none
+          background-color: $m-azul
+          z-index: 150
+  .soliloquy-container
+    width: 100%
+    margin: 0px auto
+  img
+    box-sizing: border-box
+    width: 100%
+    margin: 0px auto
+    vertical-align: top

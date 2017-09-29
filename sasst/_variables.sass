@@ -1,0 +1,125 @@
+$blanco: #ffffff
+
+$rosa: #d53132
+$grisoscuro: #333333
+$negro: #000000
+$gris: #8c8c8c
+$grisclaro: #f2f2f2
+$grismclaro: #e7e7e7
+$rojo: #b20013
+
+$grismasclaro: #e9e9e9
+$textogris: #302f2f
+$celeste: #009FFF
+$verde2: #008831
+$verde: #46b271
+$azul: #0092bf
+
+
+
+$m-grisclaro: #f2f2f2
+$m-hueso: #fcf7bf
+$m-azul: #293449
+$m-cyan: #b2f7e8
+$m-rojo: #b20013
+$m-amarillo: #f7b32b
+$m-blanco: #ffffff
+$m-verde: #46b271
+
+
+@mixin m_img()
+	img
+		max-width: 100%
+		height: 100%
+		margin: 0px auto
+		text-align: center
+		vertical-align: top
+		display: block
+		@media screen and (max-width: 640px)
+			height: auto
+		&:hover
+			filter: alpha(opacity=70)
+			-moz-opacity: 1.0
+			opacity: 0.7
+			-khml-opacity: 1.0
+			transition: 0.5s ease
+@mixin transicion_a()
+	transition: 0.5s ease
+	-o-transition: 0.5s ease
+	-webkit-transition: 0.5s ease
+
+@mixin transparencia()
+	background-color: rgba(120, 159, 198, 0.8)
+	background: rgba(120, 159, 198, 0.8)
+
+
+@mixin radio($valor: 5)
+	-webkit-border-radius: $valor+px
+	-moz-border-radius: $valor+px
+	border-radius: $valor+px
+
+@mixin opacidad($valor: 80)
+	filter: alpha(opacity=$valor)
+	-moz-opacity: 1.0
+	opacity: 0.5
+	-khml-opacity:1.0
+
+@mixin circulo()
+	border-radius: 150px
+	-webkit-border-radius: 150px
+	-moz-border-radius: 150px
+@mixin sombra()
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8)
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8)
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8)
+@mixin sombra_hover()
+	box-shadow: 0 0 8px rgba(0, 120, 240, .8)
+	-webkit-box-shadow: 0 0 8px rgba(0, 120, 240, .8)
+	-moz-box-shadow: 0 0 8px rgba(0, 120, 240, .8)
+@mixin borde($valor,$color)
+	border: $valor solid $color
+@mixin titulos($color, $texto)
+	background-color: $color
+	box-sizing:border-box
+	display: flex
+	color: $texto
+	align-items: center
+	justify-content: space-between
+@mixin tit_h3($colorh3)
+	color: $colorh3
+	font-family: 'oswaldbold'
+	text-transform:uppercase
+	list-style: none
+	text-decoration: none
+
+@mixin titulo_cuadro($color)
+	background-color: $color
+	padding: 24px 0px 17px 25px
+	box-sizing:border-box
+
+#titulo_cuadro
+	h3
+		font-size: 1.1em
+		color: $blanco
+		font-family: 'oswaldbold'
+		text-transform:uppercase
+
+@mixin tit_span()
+	margin-right: 3px
+	margin-left: 10px
+	list-style: none
+	text-decoration: none
+
+@mixin left()
+	float: left
+	margin: 20px 20px 20px 0px
+
+@mixin right()
+	float: right
+	margin: 20px 0px 20px 20px
+
+@mixin center()
+	text-align: center
+	margin:10px auto
+	clear: both
+	display: block

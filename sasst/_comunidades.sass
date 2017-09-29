@@ -1,0 +1,97 @@
+/*====================*/
+.con-general
+	.con
+		.interiores-comunidad
+			h1
+				font-size: 1.5em
+				font-weight: normal
+				text-align: center
+				margin-bottom: 2px
+			.aligncenter
+				height: 290px
+				width: 80%
+				display: block
+				margin: 10px auto 0px auto
+			p
+				line-height: 1.625em
+				font-size: 1.0625em
+				color: #302f2f
+		.m-comunidades
+			width: 100%
+			box-sizing: border-box
+			.list
+				margin: 0px auto
+				text-align: center
+				.todo
+					margin-bottom: 10px
+					.ir-agrupacion
+						display: block
+						width: 100%
+						margin-bottom: 10px
+						position: relative
+						&:hover
+							.thumb
+								overflow: hidden
+							img
+								filter: alpha(opacity=50)
+								-moz-opacity: 1.0
+								opacity: 0.5
+								-khml-opacity: 1.0
+								transition: 0.5s ease
+								box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+								transform: scale(1.5)
+						h5
+							text-align: center
+							text-transform: uppercase
+							font-weight: bold
+							color: $blanco
+							background-color: rgba(0, 0, 0, 0.7)
+							margin: 0px
+							padding: 5px 10px 5px 10px
+							position: absolute
+							left: 0
+							bottom: 0
+							font-size: 0.7em
+							width: 100%
+						.thumb
+							width: 100%
+							display: block
+							img
+								width: 100%
+								height: 150px
+/*=== sidebar comunidades ============*/
+/*====================*/
+.con-general
+	.side-comunidades
+		box-sizing: border-box
+		background-color: $grisclaro
+		padding: 0px 20px 20px 20px
+		.docs
+			p
+				color: $grisclaro
+				a
+					transition: 0.5s ease
+					&:hover
+						color: $m-verde
+						text-decoration: none
+				img
+					border: 1px solid $celeste
+					&:hover
+						transition: 0.5s ease
+						opacity: 0.6
+						transform: scaleX(1.2)
+		.galeria
+			color: $celeste
+			img
+				width: 50%
+				border: 1px solid $celeste
+				&:hover
+					transition: 0.5s ease
+					opacity: 0.6
+		.contenidos-c
+			padding: 0px 5px 5px 5px
+			text-align: center
+			h2
+				font-size: 1.125em
+				font-weight: bold
+				color: $celeste

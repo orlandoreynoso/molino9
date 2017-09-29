@@ -1,0 +1,46 @@
+.e-contenedor
+	margin-bottom: 20px
+	h2
+		padding: 15px
+		background-color: $m-verde
+		width: 100%
+		text-align: center
+		font-family: 'Oswald', sans-serif
+		color: $m-grisoscuro
+	.docs
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		box-sizing: border-box
+		.list
+			width: 50%
+			padding: 20px
+			border-bottom: 1px solid $grismasclaro
+			.thumb
+				width: 100%
+				height: auto
+				display: block
+				img
+					max-width: 100%
+					height: auto
+					margin: 0px auto
+					text-align: center
+					vertical-align: middle
+					display: block
+					&:hover
+						filter: alpha(opacity=50)
+						-moz-opacity: 1.0
+						opacity: 0.5
+						-khml-opacity: 1.0
+						transition: 0.5s ease
+						box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+			.title
+				font-family: 'Oswald', sans-serif
+				font-size: 1.3em
+				color: $celeste
+				width: 100%
+				text-align: center
+				display: block
+				margin: 5px auto
+				&:hover
+					color: $m-verde

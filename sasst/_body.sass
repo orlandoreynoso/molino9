@@ -1,0 +1,375 @@
+
+.info-parroquial
+	.titulo-iglesia
+		text-align: center
+		@include titulo_cuadro($m-verde)
+		h3
+			font-size: 1.2em
+			color: $m-grisoscuro
+			text-transform: uppercase
+			font-family: 'Oswald', sans-serif
+			margin: 0px
+			padding: 0px
+	.c-info
+		background-color: $blanco
+	#iglesia
+		min-height: 50px
+		display: flex
+		flex-flow: row wrap
+		box-sizing: border-box
+		justify-content: center
+		#div1
+			width: 22%
+			min-height: 150px
+			padding: 10px 10px 10px 10px
+			text-align: center
+			background-color: #ffffff
+			a
+				color: #333333
+				font-family: 'Oswald', sans-serif
+				text-transform: uppercase
+				text-decoration: none
+				padding: 0px 0px 8px 0px
+				display: block
+				&:hover
+					color: #009FFF
+					transition: 0.5s ease
+					-o-transition: 0.5s ease
+					-webkit-transition: 0.5s ease
+				span
+					margin-top: 4px
+					display: block
+				img
+					width: 100%
+			img
+				&:hover
+					transition: 0.5s ease
+					-o-transition: 0.5s ease
+					-webkit-transition: 0.5s ease
+					filter: alpha(opacity=50)
+					-moz-opacity: 1.0
+					opacity: 0.5
+					-khml-opacity: 1.0
+.recomen
+	.titulo-recomendaciones
+		text-align: center
+		@include titulo_cuadro($m-rojo)
+		h3
+			font-size: 1.2em
+			color: $blanco
+			text-transform: uppercase
+			font-family: 'Oswald', sans-serif
+			margin: 0px
+			padding: 0px
+	.c-recomendaciones
+		padding: 10px
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		box-sizing: border-box
+		.list
+			width: 25%
+			padding: 20px
+			border-bottom: 1px solid $grismasclaro
+			.thumb
+				width: 100%
+				height: auto
+				display: block
+				img
+					max-width: 100%
+					height: auto
+					margin: 0px auto
+					text-align: center
+					vertical-align: middle
+					display: block
+					&:hover
+						filter: alpha(opacity=50)
+						-moz-opacity: 1.0
+						opacity: 0.5
+						-khml-opacity: 1.0
+						transition: 0.5s ease
+						box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+			.title
+				font-family: 'Oswald', sans-serif
+				font-size: 1.55em
+				color: $m-verde
+				width: 100%
+				text-align: center
+				display: block
+				margin: 10px auto
+				&:hover
+					color: $celeste
+			.label
+				width: 100%
+				padding: 15px 0px
+				display: block
+				text-align: left
+				.icon-file
+					margin-right: 10px
+					color: $m-verde
+				a
+					color: $m-grisoscuro
+					&:hover
+						color: $m-verde
+
+.groupings
+	.titulo--groupings
+		@include titulo_cuadro($celeste)
+		text-align: center
+		h3
+			font-size: 1.2em
+			color: $m-grisoscuro
+			text-transform: uppercase
+			font-family: 'Oswald', sans-serif
+			margin: 0px
+			padding: 0px
+	.c-agrupaciones
+		padding: 10px
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+		box-sizing: border-box
+		.list
+			width: 25%
+			padding: 20px
+			border-bottom: 1px solid $grismasclaro
+			.exe
+				margin-top: 10px
+			.thumb
+				width: 100%
+				height: auto
+				display: block
+				img
+					max-width: 100%
+					height: auto
+					margin: 0px auto
+					text-align: center
+					vertical-align: middle
+					display: block
+					&:hover
+						filter: alpha(opacity=50)
+						-moz-opacity: 1.0
+						opacity: 0.5
+						-khml-opacity: 1.0
+						transition: 0.5s ease
+						box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+			.title
+				font-family: 'Oswald', sans-serif
+				font-size: 1.55em
+				color: $m-verde
+				width: 100%
+				text-align: center
+				display: block
+				margin: 10px auto
+				&:hover
+					color: $celeste
+			.label
+				width: 100%
+				padding: 15px 0px
+				display: block
+				text-align: left
+				.icon-file
+					margin-right: 10px
+					color: $m-verde
+				a
+					color: $m-grisoscuro
+					&:hover
+						color: $m-verde
+.con-general
+	background-color: $blanco
+	padding-top: 10px
+	.con
+		margin-bottom: 20px
+		.contenido
+			border-bottom: 1px solid rgba($m-grisoscuro, 0.4)
+			margin-bottom: 10px
+			padding-bottom: 10px
+			margin-top: 10px
+			.title
+				font-size: 1.5em
+				font-family: 'Oswald', sans-serif
+				color: $celeste
+				&:hover
+					color: $m-verde
+			.date-cat
+				padding: 10px
+				.fecha
+					font-family: 'Oswald', sans-serif
+					font-size: 0.9em
+					color: $m-rojo
+					.icon-date
+						margin-right: 5px
+						color: $m-verde
+				.descripcion_categoria
+					font-family: 'Oswald', sans-serif
+					font-size: 0.9em
+					float: right
+					text-align: right
+					color: $m-rojo
+					.icon-file
+						margin-right: 5px
+						color: $m-rojo
+					a
+						color: $celeste
+						&:hover
+							color: $m-verde
+			.thumb
+				padding: 5px
+			.info
+				padding: 5px 10px 10px 10px
+				line-height: 1.625em
+				font-size: 1.0625em
+				color: #302f2f
+				font-family: "Open Sans", sans-serif
+.con-general
+	.con
+		img
+			max-width: 100%
+			height: auto
+		.alignleft
+			float: left
+			margin: 20px 20px 20px 0px
+		.alignright
+			float: right
+			margin: 20px 0px 20px 20px
+		.aligncenter
+			width: 100%
+			height: auto
+			margin: 5px auto
+		.interiores
+			line-height: 1.625em
+			font-size: 1.0625em
+			color: $textogris
+			font-family: 'Open Sans', sans-serif
+			iframe
+				width: 100%
+				padding: 10px
+				margin: 10px auto
+				text-align: center
+			video
+				width: 100%
+				padding: 0px
+				margin: 0px auto
+			.videoPlayerIframe
+				width: 100%
+				margin: 0px
+				padding: 0px
+		.titulo
+			@include titulo_cuadro($m-verde)
+			color: $blanco
+			margin-bottom: 5px
+			.mapeo
+				a
+					color: $m-rojo
+					font-weight: bold
+					padding: 0px 4px 0px 4px
+					&:hover
+						color: $m-grisoscuro
+						font-weight: bold
+						transition: 0.5s ease
+	.side
+		.entradas
+			background-color: $grisclaro
+			.titulo_entradas
+				@include titulo_cuadro($celeste)
+				h3
+					font-size: 1.2em
+					color: $blanco
+					text-transform: uppercase
+					font-family: 'Oswald', sans-serif
+					margin: 0px
+					padding: 0px
+		.recientes
+			margin-bottom: 20px
+			padding-left: 10px
+			padding-right: 10px
+			padding-top: 10px
+			.thumb
+				width: 20%
+				img
+					height: auto
+					display: inline-block
+					float: left
+					margin-right: 7px
+					box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
+					border: 2px solid #ffffff
+					width: 90%
+					&:hover
+						filter: alpha(opacity=50)
+						-moz-opacity: 1.0
+						opacity: 0.5
+						-khml-opacity: 1.0
+						transition: 0.5s ease
+						box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+			.title
+				color: #009FFF
+				line-height: 1.3em
+				font-size: 1.1em
+				text-decoration: none
+				width: 78%
+				text-transform: lowercase
+				&:hover
+					color: #d53132
+					transition: 0.5s ease
+					-o-transition: 0.5s ease
+					-webkit-transition: 0.5s ease
+				&:first-letter
+					text-transform: uppercase
+			.list
+				padding: 5px
+				margin-bottom: 5px
+				padding-bottom: 9px
+				overflow: hidden
+				border-bottom: 1px solid #009FFF
+				text-transform: lowercase
+				display: flex
+				flex-flow: row wrap
+				justify-content: space-between
+				align-items: center
+				box-sizing: border-box
+/*------------------------------------*/
+/*----*/
+footer
+	width: 100%
+	background-color: #d53132
+
+/*---*/
+#pie
+	background-color: #d53132
+	min-height: 150px
+	.group
+		padding: 50px
+		text-align: center
+		color: #ffffff
+		line-height: 1.5em
+		font-family: 'Economica-Bold'
+		text-shadow: 1px 2px 1px #000
+		font-size: 1.2em
+		a
+			color: #009FFF
+			&:hover
+				color: #f2f2f2
+				transition: 0.5s ease
+				-o-transition: 0.5s ease
+				-webkit-transition: 0.5s ease
+
+/*----*/
+#totop
+	display: none
+	text-decoration: none
+	position: fixed
+	bottom: 40px
+	margin-left: 640px
+	overflow: hidden
+	width: 43px
+	height: 28px
+	border: none
+	text-indent: -999px
+	z-index: 20
+	background: url("../images/totop.png") no-repeat left 0
+	transition: 0s ease
+	-o-transition: 0s ease
+	-webkit-transition: 0s ease
+	&:hover
+		outline: none
+		background-position: right 0

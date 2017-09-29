@@ -1,0 +1,134 @@
+.con-general
+  .con
+    .interiores
+      padding-top: 20px
+      iframe
+        width: 100%
+        height: 480px
+        padding: 10px
+        margin: 10px auto
+        text-align: center
+        #facebook
+          border: 2px solid red
+        @media screen and (max-width: 640px) /*.. de 600px a 0px */
+          height: 350px
+        @media screen and (max-width: 320px) /*.. de 320px a 0px */
+          width: 240px
+          height: 240px
+          padding: 0px
+          margin: 0px auto
+          text-align: center
+      video
+        width: 100%
+        height: 480px
+        padding: 0px
+        margin: 0px auto
+        @media screen and (max-width: 640px) /*.. de 600px a 0px */
+          height: 350px
+        @media screen and (max-width: 320px) /*.. de 320px a 0px */
+          width: 240px
+          height: 240px
+          padding: 0px
+          margin: 0px auto
+          text-align: center
+      .header-title
+        width: 100%
+        padding: 10px
+        margin-bottom: 30px
+        display: flex
+        flex-wrap: wrap
+        flex-flow: row
+        justify-content: space-between
+        align-items: flex-end
+        position: relative
+        @media screen and (max-width: 480px)
+          flex-flow: column
+          .titulo
+            margin-right: 14px
+        &::after
+          position: absolute
+          right: 20px
+          bottom: -10px
+          content: ""
+          background-color: rgba($m-verde,0.5)
+          height: 1px
+          display: block
+          width: 97%
+      .mapeo
+        .current
+          display: none
+      .titulos-page
+        border-right: 5px solid $celeste
+        padding: 0px 20px 0px 20px
+        font-size: 1.125em
+        text-align: right
+        @media screen and (max-width: 480px)
+          padding-right: 10px
+  .side
+    padding-top: 20px
+    .entradas
+      background-color: $grisclaro
+      .titulo_entradas
+        @include titulo_cuadro($celeste)
+        h3
+          font-size: 1.2em
+          color: $blanco
+          text-transform: uppercase
+          font-family: 'Oswald', sans-serif
+          margin: 0px
+          padding: 0px
+  .side
+    .entradas
+      .recientes
+        margin-bottom: 20px
+        padding-left: 10px
+        padding-right: 10px
+        padding-top: 10px
+        .list
+          padding: 5px
+          margin-bottom: 5px
+          padding-bottom: 9px
+          overflow: hidden
+          border-bottom: 1px solid #009FFF
+          text-transform: lowercase
+          display: flex
+          flex-flow: row wrap
+          justify-content: space-between
+          align-items: center
+          box-sizing: border-box
+          .thumb
+            width: 20%
+            img
+              height: auto
+              display: inline-block
+              float: left
+              margin-right: 7px
+              box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
+              border: 2px solid #ffffff
+              width: 90%
+              &:hover
+                filter: alpha(opacity=50)
+                -moz-opacity: 1.0
+                opacity: 0.5
+                -khml-opacity: 1.0
+                transition: 0.5s ease
+                box-shadow: 0 0 8px rgba(0, 120, 240, 0.8)
+.con-general
+  .side
+    .entradas
+      .recientes
+        .list
+          .title
+            color: #009FFF
+            line-height: 1.3em
+            font-size: 1.1em
+            text-decoration: none
+            width: 78%
+            text-transform: lowercase
+            &:hover
+              color: #d53132
+              transition: 0.5s ease
+              -o-transition: 0.5s ease
+              -webkit-transition: 0.5s ease
+            &:first-letter
+              text-transform: uppercase
