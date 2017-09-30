@@ -8,6 +8,7 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+	<?php get_template_part( 'template/portada','header'); ?>
 	<div class="container">
 		<div class="m-header">
 			<div class="row">
