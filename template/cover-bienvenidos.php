@@ -1,5 +1,5 @@
 <div class="texto-bienvenida">
-  <?php $the_query = new WP_Query(contenidosPorNombre('page','bienvenida-rectoria-santa-rita',1));  ?>
+  <?php $the_query = new WP_Query(contenidosPorNombre('page','bienvenida-molino-las-flores',1));  ?>
   <div class="contenidos-c oracion">
     <?php
     while ($the_query -> have_posts()){

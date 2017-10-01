@@ -5,5 +5,105 @@
 .m-azul
   background-color: $m-azul
 .m-contenido-secciones
-  background-color: green
-  padding: 20px
+  padding-top: 20px
+  padding-bottom: 20px
+  .titulos-general
+    @include tituloafter($m-azul, $m-verde)
+  .listado-entradas
+    display: flex
+    flex-flow: row wrap
+    box-sizing: border-box
+    justify-content: center
+    align-items: stretch
+    .lista
+      width: calc(var(--sizem)/2)
+      min-height: 150px
+      text-align: center
+      box-sizing: border-box
+      padding: 5px
+      @media screen and (max-width: 640px) /**.. 600px a 0 px */
+        width: var(--sizem)
+      a
+        color: $m-azul
+        font-family: 'Oswald', sans-serif
+        text-transform: uppercase
+        font-size: 0.9em
+        text-decoration: none
+        padding: 0px 0px 8px 0px
+        display: block
+        margin: 10px
+        &:hover
+          color: $m-verde
+          transition: 0.5s ease
+        .texto
+          display: block
+          height: 50px
+          display: flex
+          align-items: center
+          justify-content: center
+        img
+          width: 100%
+          height: 200px
+          &:hover
+            transition: 0.5s ease
+            opacity: 0.5
+  .titulo-anuncios
+    text-align: center
+    font-size: 1.125em
+  .c-info
+    background-color: red
+    #div1
+      width: 50%
+      box-sizing: border-box
+      a
+        display: block
+        width: 100%
+        img
+          width: 100%
+          height: auto
+/*=============== Portada ================*/
+.m-cover-portada
+  background-position: center
+  background-size: cover
+  @media screen and (min-width: 760px) /* de 760 a 10000 en adelante */
+    padding: 80px 20px 80px 20px
+    background-image: url('../images/header-msc.jpg')
+  @media screen and (max-width: 760px) /* 480 a 0 */
+    background-color: $m-tinto
+    padding: 40px 10px
+  .div-logo
+    display: flex
+    flex-flow: row
+    flex-wrap: wrap
+    padding: 10px
+    justify-content: center
+    align-items: center
+    .logo
+      display: block
+      width: 100px
+      height: auto
+      margin-bottom: 10px
+      @media screen and (min-width: 760px) /* 769 al infinito*/
+        margin-right: 15px
+      img
+        width: 100%
+        height: auto
+    .slogan
+      text-align: center
+      margin: 0px
+      padding: 0px
+      h2
+        color: $m-amarillo
+        font-size: 3.75em
+        @media screen and (max-width: 480px)
+          font-size: 2em
+      h3
+        color: $blanco
+        font-size: 1em
+        @media screen and (max-width: 480px)
+  .div-bienvenida
+    text-align: center
+    @media screen and (min-width: 760px) /* 760 al infinito*/
+      margin-top: 50px
+    .texto-bienvenida
+      color: $blanco

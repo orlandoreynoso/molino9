@@ -3,6 +3,8 @@
 		padding: 10px 0px 10px
 	background-color: $m-azul
 	width: 100%
+	padding-top: 20px
+	padding-bottom: 20px
 	.navbar
 		@media screen and ( min-width: 640px ) /*=== ocultar de 640px hasta infinito=====*/
 			display: none
@@ -15,6 +17,8 @@
 				color: $m-verde
 		.navbar-brand
 			float: left
+			@media screen and (max-width: 760px) /*  de 760 a 0*/
+				display: none
 			img
 				width: 70px
 				transition: 0.5s ease
@@ -82,6 +86,8 @@
 			flex-flow: row
 			flex-wrap: wrap
 			justify-content: center
+			.current_page_item
+				border-bottom: 3px solid $celeste
 			li
 				position: relative
 				padding: 0px 0px 0px
@@ -92,7 +98,7 @@
 						width: 100%
 						content: ''
 						display: block
-						background-color: $m-verde
+						background-color: $celeste
 						height: 3px
 						width: calc(var(--ttw)/2)
 						position: absolute

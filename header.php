@@ -8,26 +8,17 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-	<?php get_template_part( 'template/portada','header'); ?>
-	<div class="container">
-		<div class="m-header">
-			<div class="row">
-				<div class="col-sm-6 col-md-4">
-					<div class="ls">
-						<?php logo(); ?>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-8">
-					<div class="sm">
-						<div class="ubicacion">
-							<span class="icon fa fa-map-marker"></span>
-							<span id="texto">Mixco, Guatemala</span>
-						</div>
-						<div class="search"><?php  get_search_form(); ?></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php
+/*
+	$clave = get_the_ID();
+	echo $clave;*/
+
+		if(is_page('5')){
+			get_template_part( 'template/portada','header');
+		}
+
+	?>
+	<?php //  ?>
+	<?php // get_template_part( 'template/portada','headerExtra'); ?>
 	<?php // include (TEMPLATEPATH . '/libs/menuviejo.php');  ?>
 	<?php get_template_part( 'template/header', 'menu') ?>

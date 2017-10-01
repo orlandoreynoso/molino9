@@ -38,7 +38,7 @@ function mscEntradasRecientes(){
         'order'               => 'DESC',
         'orderby'             => 'date',
         //Pagination Parameters
-        'posts_per_page'         => 8,
+        'posts_per_page'         => 4,
     );
 // The Query
 $the_query = new WP_Query( $args_10);
@@ -67,5 +67,41 @@ if ( $the_query->have_posts() ) {
  wp_reset_postdata();
 }
 
+/*=========== recomendaciones sin EXE*/
+function ContenidoHijoPost($page,$perpage){
+    ?>
+    <?php
+    $the_query = new WP_Query(create_array($page,$perpage));
+        $id = get_permalink($page);
+        $title = get_the_title($page );
+         while($the_query->have_posts()) : $the_query->the_post();  ?>
+        <div class="lista">
+            <a class="thumb" href="<?php the_permalink(); ?>">
+              <?php the_post_thumbnail('full'); ?>
+              <div class="texto"><span><?php the_title(); ?></span></div>
+            </a>
+            <!-- div class="exe"><?php // excerpt('20'); ?> </div -->
+        </div>
+    <?php
+      endwhile;
+}
+
+function contenidoPaginaPorNombre($pagename){
+    ?>
+    <?php
+    $the_query = new WP_Query(create_pagename($pagename));
+        $id = get_permalink($page);
+        $title = get_the_title($page );
+         while($the_query->have_posts()) : $the_query->the_post();  ?>
+         <div class="lista">
+             <a class="thumb" href="<?php the_permalink(); ?>">
+               <?php the_post_thumbnail('full'); ?>
+               <div class="texto"><span><?php the_title(); ?></span></div>
+             </a>
+             <!-- div class="exe"><?php // excerpt('20'); ?> </div -->
+         </div>
+    <?php
+      endwhile;
+}
 
 ?>

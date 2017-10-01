@@ -19,13 +19,13 @@ Template Name: coverPage Santa rita
   <?php get_template_part( 'template/cover', 'contenido') ?>
 </section>
 
-<section class="m-entradas-recientes">
-  <?php get_template_part( 'template/cover','recomendaciones' ); ?>
-</section>
+<!-- section class="m-entradas-recientes">
+  <?php // get_template_part( 'template/cover','recomendaciones' ); ?>
+</section -->
 
-<section class="m-entradas-recientes m-gris">
-  <?php get_template_part( 'template/cover','entradasrecientes' ); ?>
-</section>
+<!-- section class="m-entradas-recientes m-gris">
+  <?php // get_template_part( 'template/cover','entradasrecientes' ); ?>
+</section -->
 
 <section class="msc-agrupaciones">
   <?php get_template_part( 'template/cover', 'agrupaciones') ?>
