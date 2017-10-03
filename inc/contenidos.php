@@ -67,18 +67,22 @@ if ( $the_query->have_posts() ) {
  wp_reset_postdata();
 }
 
-/*=========== recomendaciones sin EXE*/
+/*===========
+recomendaciones sin EXE
+Mostrando contenidos hijos y con titulo de la página Padre
+*/
+
 function ContenidoHijoPost($page,$perpage){
     ?>
     <?php
     $the_query = new WP_Query(create_array($page,$perpage));
         $id = get_permalink($page);
-        $title = get_the_title($page );
+        $title = get_the_title($page); /**/
          while($the_query->have_posts()) : $the_query->the_post();  ?>
         <div class="lista">
             <a class="thumb" href="<?php the_permalink(); ?>">
               <?php the_post_thumbnail('full'); ?>
-              <div class="texto"><span><?php the_title(); ?></span></div>
+              <div class="texto"><span><?php echo $title; ?></span></div>
             </a>
             <!-- div class="exe"><?php // excerpt('20'); ?> </div -->
         </div>

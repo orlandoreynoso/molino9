@@ -1,7 +1,7 @@
 <?php
 /*
-  Template Name: Pastorales
-  Template Post Type: post, page, product
+  Template Name: Agrupaciones
+  Template Post Type: post, page, product, agrupaciones
 */
  get_header();
 ?>
@@ -34,10 +34,11 @@
             <?php // echo "template pastorales"; ?>
                 <div class="c-agrupaciones">
                   <?php $the_query = new WP_Query(contenidosPorId('page',$pagina_id,-1)); ?>
-
+                  <?php /*
                   <div class="titulo-pastorales">
                   	<h3><?php $nombre = the_title(); ?></h3>
                   </div>
+                  */  ?>
 
                     <?php // $the_query = new WP_Query(get_agrupaciones(2883,-1));    ?>
                     <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>

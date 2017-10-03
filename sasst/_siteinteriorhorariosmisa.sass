@@ -1,0 +1,21 @@
+.interior-horarios-misa
+  display: flex
+  flex-flow: row wrap
+  box-sizing: border-box
+  .horarios
+    box-sizing: border-box
+    text-align: center
+    width: calc(var(--sizem)/2)
+  .contenidos
+    width: calc(var(--sizem)/2)
+    padding: 0px
+    margin: 0px
+    box-sizing: border-box
+    .agrupaciones-desglose
+      width: calc(var(--sizem)/1)
+      .c-agrupaciones
+        width: calc(var(--sizem)/1)
+        .list
+          width: calc(var(--sizem)/2)
+          @media screen and (max-width: 480px) /* 480 a  0*/
+            width: var(--sizem)

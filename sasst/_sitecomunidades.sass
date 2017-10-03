@@ -32,6 +32,12 @@
 				box-sizing: border-box
 				padding: 10px
 				margin-bottom: 12px
+				@media screen and (max-width: 768px)
+					width: calc(var(--sizem)/3)				
+				@media screen and (max-width: 720px)
+					width: calc(var(--sizem)/2)
+				@media screen and (max-width: 480px)  /*   de 480 a 0*/
+					width: calc(var(--sizem))
 				.todo
 					margin-bottom: 10px
 					.ir-agrupacion

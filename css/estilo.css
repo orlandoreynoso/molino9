@@ -214,7 +214,7 @@
             height: 125px;
             display: block; }
             .msc-agrupaciones .c-agrupaciones .list .todo .ir-agrupacion .thumb img {
-              max-width: 100%;
+              width: 100%;
               height: 100%;
               margin: 0px auto;
               text-align: center;
@@ -780,92 +780,60 @@ input[type=number]::-webkit-outer-spin-button {
             transition: 0.5s ease;
             opacity: 0.5; }
 
-#totop {
-  display: none;
-  text-decoration: none;
-  position: fixed;
-  bottom: 40px;
-  margin-left: 640px;
-  overflow: hidden;
-  width: 43px;
-  height: 28px;
-  border: none;
-  text-indent: -999px;
-  z-index: 20;
-  background: url("../images/totop.png") no-repeat left 0;
-  transition: 0s ease;
-  -o-transition: 0s ease;
-  -webkit-transition: 0s ease; }
-  #totop:hover {
-    outline: none;
-    background-position: right 0; }
-
-footer {
-  width: 100%;
-  background-color: #46b271; }
-  footer #pie {
-    background-color: #46b271;
-    min-height: 150px; }
-    footer #pie .group {
-      padding: 50px;
-      text-align: center;
-      color: #ffffff;
-      line-height: 1.5em;
-      font-family: "Economica-Bold";
-      text-shadow: 1px 2px 1px #000;
-      font-size: 1.2em; }
-      footer #pie .group a {
-        color: #f7b32b;
-        text-decoration: none; }
-        footer #pie .group a:hover {
-          color: #009FFF;
-          transition: 0.5s ease; }
-
 .con-general .con .interiores,
-.con-general .con .interiores-comunidad {
+.con-general .con .interiores-comunidad,
+.con-general .con .interior-horarios-misa {
   padding-top: 20px; }
   .con-general .con .interiores iframe,
-  .con-general .con .interiores-comunidad iframe {
+  .con-general .con .interiores-comunidad iframe,
+  .con-general .con .interior-horarios-misa iframe {
     width: 100%;
     height: 480px;
     padding: 10px;
     margin: 10px auto;
     text-align: center; }
     .con-general .con .interiores iframe #facebook,
-    .con-general .con .interiores-comunidad iframe #facebook {
+    .con-general .con .interiores-comunidad iframe #facebook,
+    .con-general .con .interior-horarios-misa iframe #facebook {
       border: 2px solid red; }
     @media screen and (max-width: 640px) {
       .con-general .con .interiores iframe,
-      .con-general .con .interiores-comunidad iframe {
+      .con-general .con .interiores-comunidad iframe,
+      .con-general .con .interior-horarios-misa iframe {
         height: 350px; } }
     @media screen and (max-width: 320px) {
       .con-general .con .interiores iframe,
-      .con-general .con .interiores-comunidad iframe {
+      .con-general .con .interiores-comunidad iframe,
+      .con-general .con .interior-horarios-misa iframe {
         width: 240px;
         height: 240px;
         padding: 0px;
         margin: 0px auto;
         text-align: center; } }
   .con-general .con .interiores video,
-  .con-general .con .interiores-comunidad video {
+  .con-general .con .interiores-comunidad video,
+  .con-general .con .interior-horarios-misa video {
     width: 100%;
     height: 480px;
     padding: 0px;
     margin: 0px auto; }
     @media screen and (max-width: 640px) {
       .con-general .con .interiores video,
-      .con-general .con .interiores-comunidad video {
+      .con-general .con .interiores-comunidad video,
+      .con-general .con .interior-horarios-misa video {
         height: 350px; } }
     @media screen and (max-width: 320px) {
       .con-general .con .interiores video,
-      .con-general .con .interiores-comunidad video {
+      .con-general .con .interiores-comunidad video,
+      .con-general .con .interior-horarios-misa video {
         width: 240px;
         height: 240px;
         padding: 0px;
         margin: 0px auto;
         text-align: center; } }
   .con-general .con .interiores .header-title,
-  .con-general .con .interiores-comunidad .header-title {
+  .con-general .con .interiores-comunidad .header-title,
+  .con-general .con .interior-horarios-misa .header-title {
     width: 100%;
     padding: 10px;
     margin-bottom: 30px;
@@ -877,13 +845,16 @@ footer {
     position: relative; }
     @media screen and (max-width: 480px) {
       .con-general .con .interiores .header-title,
-      .con-general .con .interiores-comunidad .header-title {
+      .con-general .con .interiores-comunidad .header-title,
+      .con-general .con .interior-horarios-misa .header-title {
         flex-flow: column; }
         .con-general .con .interiores .header-title .titulo,
-        .con-general .con .interiores-comunidad .header-title .titulo {
+        .con-general .con .interiores-comunidad .header-title .titulo,
+        .con-general .con .interior-horarios-misa .header-title .titulo {
           margin-right: 14px; } }
     .con-general .con .interiores .header-title::after,
-    .con-general .con .interiores-comunidad .header-title::after {
+    .con-general .con .interiores-comunidad .header-title::after,
+    .con-general .con .interior-horarios-misa .header-title::after {
       position: absolute;
       right: 20px;
       bottom: -10px;
@@ -893,17 +864,20 @@ footer {
       display: block;
       width: 97%; }
   .con-general .con .interiores .mapeo .current,
-  .con-general .con .interiores-comunidad .mapeo .current {
+  .con-general .con .interiores-comunidad .mapeo .current,
+  .con-general .con .interior-horarios-misa .mapeo .current {
     display: none; }
   .con-general .con .interiores .titulos-page,
-  .con-general .con .interiores-comunidad .titulos-page {
+  .con-general .con .interiores-comunidad .titulos-page,
+  .con-general .con .interior-horarios-misa .titulos-page {
     border-right: 5px solid #009FFF;
     padding: 0px 20px 0px 20px;
     font-size: 1.125em;
     text-align: right; }
     @media screen and (max-width: 480px) {
       .con-general .con .interiores .titulos-page,
-      .con-general .con .interiores-comunidad .titulos-page {
+      .con-general .con .interiores-comunidad .titulos-page,
+      .con-general .con .interior-horarios-misa .titulos-page {
         padding-right: 10px; } }
 .con-general .side {
   padding-top: 20px; }
@@ -1116,7 +1090,7 @@ footer {
             display: block;
             padding: 10px; }
             .agrupaciones-desglose .c-agrupaciones .list .infocomunidades .ir-agrupacion .thumb img {
-              max-width: 100%;
+              width: 100%;
               height: 100%;
               margin: 0px auto;
               text-align: center;
@@ -1166,7 +1140,7 @@ footer {
             height: 125px;
             display: block; }
             .agrupaciones-desglose .c-agrupaciones .list .todo .ir-agrupacion .thumb img {
-              max-width: 100%;
+              width: 100%;
               height: 100%;
               margin: 0px auto;
               text-align: center;
@@ -1220,6 +1194,15 @@ footer {
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 12px; }
+    @media screen and (max-width: 768px) {
+      .con-general .con .m-comunidades .list {
+        width: calc(var(--sizem)/3); } }
+    @media screen and (max-width: 720px) {
+      .con-general .con .m-comunidades .list {
+        width: calc(var(--sizem)/2); } }
+    @media screen and (max-width: 480px) {
+      .con-general .con .m-comunidades .list {
+        width: calc(var(--sizem)); } }
     .con-general .con .m-comunidades .list .todo {
       margin-bottom: 10px; }
       .con-general .con .m-comunidades .list .todo .ir-agrupacion {
@@ -1291,5 +1274,69 @@ footer {
       font-size: 1.125em;
       font-weight: bold;
       color: #009FFF; }
+
+.interior-horarios-misa {
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box; }
+  .interior-horarios-misa .horarios {
+    box-sizing: border-box;
+    text-align: center;
+    width: calc(var(--sizem)/2); }
+  .interior-horarios-misa .contenidos {
+    width: calc(var(--sizem)/2);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; }
+    .interior-horarios-misa .contenidos .agrupaciones-desglose {
+      width: calc(var(--sizem)/1); }
+      .interior-horarios-misa .contenidos .agrupaciones-desglose .c-agrupaciones {
+        width: calc(var(--sizem)/1); }
+        .interior-horarios-misa .contenidos .agrupaciones-desglose .c-agrupaciones .list {
+          width: calc(var(--sizem)/2); }
+          @media screen and (max-width: 480px) {
+            .interior-horarios-misa .contenidos .agrupaciones-desglose .c-agrupaciones .list {
+              width: var(--sizem); } }
+
+#totop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 40px;
+  margin-left: 640px;
+  overflow: hidden;
+  width: 43px;
+  height: 28px;
+  border: none;
+  text-indent: -999px;
+  z-index: 20;
+  background: url("../images/totop.png") no-repeat left 0;
+  transition: 0s ease;
+  -o-transition: 0s ease;
+  -webkit-transition: 0s ease; }
+  #totop:hover {
+    outline: none;
+    background-position: right 0; }
+
+footer {
+  width: 100%;
+  background-color: #b20013; }
+  footer #pie {
+    background-color: #b20013;
+    min-height: 150px; }
+    footer #pie .group {
+      padding: 50px;
+      text-align: center;
+      color: #ffffff;
+      line-height: 1.5em;
+      font-family: "Economica-Bold";
+      text-shadow: 1px 2px 1px #000;
+      font-size: 1.2em; }
+      footer #pie .group a {
+        color: #f7b32b;
+        text-decoration: none; }
+        footer #pie .group a:hover {
+          color: #009FFF;
+          transition: 0.5s ease; }
 
 /*# sourceMappingURL=estilo.css.map */
