@@ -1283,18 +1283,32 @@ input[type=number]::-webkit-outer-spin-button {
     box-sizing: border-box;
     text-align: center;
     width: calc(var(--sizem)/2); }
+    @media screen and (max-width: 576px) {
+      .interior-horarios-misa .horarios {
+        width: calc(var(--sizem)/1); } }
   .interior-horarios-misa .contenidos {
     width: calc(var(--sizem)/2);
     padding: 0px;
     margin: 0px;
     box-sizing: border-box; }
+    @media screen and (max-width: 576px) {
+      .interior-horarios-misa .contenidos {
+        width: calc(var(--sizem)/1); } }
     .interior-horarios-misa .contenidos .agrupaciones-desglose {
-      width: calc(var(--sizem)/1); }
+      width: calc(var(--sizem)/1);
+      margin-top: 20px; }
       .interior-horarios-misa .contenidos .agrupaciones-desglose .c-agrupaciones {
-        width: calc(var(--sizem)/1); }
+        width: calc(var(--sizem)/1);
+        text-align: center; }
+        .interior-horarios-misa .contenidos .agrupaciones-desglose .c-agrupaciones h2 {
+          text-align: center;
+          width: var(--sizem); }
         .interior-horarios-misa .contenidos .agrupaciones-desglose .c-agrupaciones .list {
           width: calc(var(--sizem)/2); }
           @media screen and (max-width: 480px) {
+            .interior-horarios-misa .contenidos .agrupaciones-desglose .c-agrupaciones .list {
+              width: var(--sizem); } }
+          @media screen and (max-width: 768px) {
             .interior-horarios-misa .contenidos .agrupaciones-desglose .c-agrupaciones .list {
               width: var(--sizem); } }
 

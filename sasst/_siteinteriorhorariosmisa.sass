@@ -6,16 +6,27 @@
     box-sizing: border-box
     text-align: center
     width: calc(var(--sizem)/2)
+    @media screen and (max-width: 576px)  /* 576 a cero 0*/
+      width: calc(var(--sizem)/1)
   .contenidos
     width: calc(var(--sizem)/2)
     padding: 0px
     margin: 0px
     box-sizing: border-box
+    @media screen and (max-width: 576px)
+      width: calc(var(--sizem)/1)
     .agrupaciones-desglose
       width: calc(var(--sizem)/1)
+      margin-top: 20px
       .c-agrupaciones
         width: calc(var(--sizem)/1)
+        text-align: center
+        h2
+          text-align: center
+          width: var(--sizem)
         .list
           width: calc(var(--sizem)/2)
           @media screen and (max-width: 480px) /* 480 a  0*/
+            width: var(--sizem)
+          @media screen and (max-width: 768px) /* de 768 a cero. 0**/
             width: var(--sizem)

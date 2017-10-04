@@ -23,6 +23,7 @@ echo esc_html( get_the_title() ); */
   <?php// echo get_page_template_slug( $variable );  indica el template que uso?>
 <div class="agrupaciones-desglose">
       <div class="c-agrupaciones">
+        <h2>Contenidos de interés</h2>
 
         <?php $the_query = new WP_Query(contenidosPorNombre($tipo,$namePagina,$cantidad));   ?>
         <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
