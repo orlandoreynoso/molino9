@@ -78,6 +78,8 @@
     padding: 10px
     justify-content: center
     align-items: center
+    @media screen and (max-width: 760px) /* 760 a 0 */
+      flex-direction: column
     .logo
       display: block
       width: 100px
@@ -85,6 +87,9 @@
       margin-bottom: 10px
       @media screen and (min-width: 760px) /* 769 al infinito*/
         margin-right: 15px
+      @media screen and (max-width: 760px) /* 760 a 0 */
+        width: 80px !important
+        display: none
       img
         width: 100%
         height: auto
@@ -100,7 +105,8 @@
       h3
         color: $blanco
         font-size: 1em
-        @media screen and (max-width: 480px)
+        @media screen and (max-width: 480px) /*480 a 0*/
+          line-height: 1.5em
   .div-bienvenida
     text-align: center
     @media screen and (min-width: 760px) /* 760 al infinito*/

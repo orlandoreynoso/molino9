@@ -101,7 +101,7 @@ $logo = IMAGES.'/logomsc.png'; ?>
 }
 
 function logoMovil(){
-$logo = IMAGES.'/logo.png'; ?>
+$logo = IMAGES.'/logomsc.png'; ?>
 <a class="logo navbar-brand text-left" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo $logo; ?>" alt="Misioneros del sagrado Corazón de Jesús"></a>
 <?php
 }

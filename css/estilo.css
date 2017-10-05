@@ -111,6 +111,9 @@
     padding: 10px;
     justify-content: center;
     align-items: center; }
+    @media screen and (max-width: 760px) {
+      .m-cover-portada .div-logo {
+        flex-direction: column; } }
     .m-cover-portada .div-logo .logo {
       display: block;
       width: 100px;
@@ -119,6 +122,10 @@
       @media screen and (min-width: 760px) {
         .m-cover-portada .div-logo .logo {
           margin-right: 15px; } }
+      @media screen and (max-width: 760px) {
+        .m-cover-portada .div-logo .logo {
+          width: 80px !important;
+          display: none; } }
       .m-cover-portada .div-logo .logo img {
         width: 100%;
         height: auto; }
@@ -135,6 +142,9 @@
       .m-cover-portada .div-logo .slogan h3 {
         color: #ffffff;
         font-size: 1em; }
+        @media screen and (max-width: 480px) {
+          .m-cover-portada .div-logo .slogan h3 {
+            line-height: 1.5em; } }
   .m-cover-portada .div-bienvenida {
     text-align: center; }
     @media screen and (min-width: 760px) {
@@ -381,11 +391,36 @@ input[type=number]::-webkit-outer-spin-button {
   @media screen and (min-width: 640px) {
     .e-menu .navbar {
       display: none; } }
+  .e-menu .navbar .cuadro-menu {
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center; }
+    .e-menu .navbar .cuadro-menu .collapsed {
+      color: #293449;
+      transition: 0.5s ease; }
+    .e-menu .navbar .cuadro-menu #navbarNav {
+      height: auto;
+      transition: 0.5s ease; }
+    .e-menu .navbar .cuadro-menu .collapsing {
+      padding: 0px;
+      margin: 0px;
+      height: auto;
+      box-sizing: border-box;
+      transition: 0.5s ease; }
+    .e-menu .navbar .cuadro-menu .navbar-collapse {
+      transition: 0.5s ease; }
+    .e-menu .navbar .cuadro-menu .logo {
+      width: 80px; }
+      .e-menu .navbar .cuadro-menu .logo img {
+        width: 100%; }
   .e-menu .navbar button.navbar-toggler {
     border: 1px solid #46b271;
     background-color: #46b271;
-    transition: 0.5s ease;
-    float: right; }
+    transition: 0.5s ease; }
     .e-menu .navbar button.navbar-toggler .navbar-toggler-icon {
       color: #46b271; }
   .e-menu .navbar .navbar-brand {
@@ -399,7 +434,7 @@ input[type=number]::-webkit-outer-spin-button {
       .e-menu .navbar .navbar-brand img:hover {
         opacity: 0.8; }
   .e-menu .navbar .sm {
-    margin: auto; }
+    margin: 0px auto 15px auto; }
     .e-menu .navbar .sm .ubicacion {
       text-align: center;
       margin-bottom: 10px; }

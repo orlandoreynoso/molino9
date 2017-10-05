@@ -8,11 +8,36 @@
 	.navbar
 		@media screen and ( min-width: 640px ) /*=== ocultar de 640px hasta infinito=====*/
 			display: none
+		.cuadro-menu
+			padding: 20px
+			display: flex
+			flex-flow: row wrap
+			width: 100%
+			justify-content: space-between
+			align-content: center
+			align-items: center
+			.collapsed
+				color: $m-azul
+				transition: 0.5s ease
+			#navbarNav
+				height: auto
+				transition: 0.5s ease
+			.collapsing
+				padding: 0px
+				margin: 0px
+				height: auto
+				box-sizing: border-box
+				transition: 0.5s ease
+			.navbar-collapse
+				transition: 0.5s ease
+			.logo
+				width: 80px
+				img
+					width: 100%
 		button.navbar-toggler
 			border: 1px solid $m-verde
 			background-color: $m-verde
 			transition: 0.5s ease
-			float: right
 			.navbar-toggler-icon
 				color: $m-verde
 		.navbar-brand
@@ -25,7 +50,7 @@
 				&:hover
 					opacity: 0.8
 		.sm
-			margin: auto
+			margin: 0px auto 15px auto
 			.ubicacion
 				text-align: center
 				margin-bottom: 10px
@@ -79,7 +104,7 @@
 						color: $m-verde
 .e-menu
 	.navbar-me
-		@media screen and ( max-width: 640px )/*===  ocultar de 0 a 640px =====*/
+		@media screen and ( max-width: 640px )/*===  640 a 0 =====*/
 			display: none
 		ul.menu
 			display: flex
