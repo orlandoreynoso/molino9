@@ -11,6 +11,9 @@ $ = jQuery.noConflict();
 
 $(document).ready(function() {
 
+
+//$('.dropdown-toggle').dropdown()	
+
 	var nombre = "orlando reynoso";
   //  console.log("Cargado completamente ");
   // alert(nombre);

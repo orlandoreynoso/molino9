@@ -1,0 +1,49 @@
+.e-menu
+	.navbar
+		@media screen and ( min-width: 640px ) /*=== ocultar de 640px hasta infinito=====*/
+			display: none
+		.cuadro-menu
+			padding: 20px
+			display: flex
+			flex-flow: row wrap
+			width: 100%
+			justify-content: space-between
+			align-content: center
+			align-items: center
+			.menu
+				margin-top: 20px
+				li
+					border-bottom: 1px solid $m-verde
+					margin-bottom: 2px
+					a
+						width: 100%
+						display: block
+						text-decoration: none
+						font-size: 1.2em
+						&:before
+							content: ""
+							list-style-type: circle
+							color: green
+						&:hover
+							color: $celeste
+							transition: 0.5s ease
+							margin-left: 10px
+			.logo
+				width: 70px
+				img
+					width: 100%
+		button.navbar-toggler /* icono verde del menu*/
+			border: 1px solid $m-verde
+			background-color: $m-verde
+			transition: 0.5s ease
+			cursor: pointer
+			outline: none
+			.navbar-toggler-icon
+				color: $m-verde
+		.navbar-brand
+			float: left
+			img
+				width: 70px
+				transition: 0.5s ease
+				&:hover
+					opacity: 0.8

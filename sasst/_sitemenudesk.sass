@@ -1,0 +1,39 @@
+.e-menu
+	background-color: $m-azul
+	width: 100%
+.e-menu
+	.navbar-me
+		@media screen and ( max-width: 640px )/* ocultarlo cuando sea 640pa a 0px =====*/
+			display: none
+		ul.menu
+			display: flex
+			flex-flow: row
+			flex-wrap: wrap
+			justify-content: center
+			.current_page_item
+				border-bottom: 3px solid $celeste
+			li
+				position: relative
+				padding: 0px 0px 0px
+				--ttw: 100%
+				&:hover
+					transition: 0.5s ease
+					&:after
+						width: 100%
+						content: ''
+						display: block
+						background-color: $celeste
+						height: 3px
+						width: calc(var(--ttw)/2)
+						position: absolute
+						left: calc( calc( 100% - ( calc(var(--ttw)/2)) ) / 2 )
+						bottom: 0px
+						z-index: 100
+						transition: 0.5s ease
+				a
+					padding: 20px 10px 20px
+					display: block
+					color: $blanco
+					text-decoration: none
+					&:hover
+						color: $m-verde

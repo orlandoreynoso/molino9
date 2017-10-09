@@ -1,0 +1,70 @@
+.e-menu
+	.navbar
+		@media screen and ( min-width: 640px ) /*=== ocultar de 640px hasta infinito=====*/
+			display: none
+		.cuadro-menu
+			padding: 20px
+			display: flex
+			flex-flow: row wrap
+			width: 100%
+			justify-content: space-between
+			align-content: center
+			align-items: center
+			.collapsed
+				color: $m-azul
+				transition: 0.5s ease
+			#navbarNav
+				height: auto
+				transition: 0.5s ease
+			.collapsing
+				padding: 0px
+				margin: 0px
+				height: auto
+				box-sizing: border-box
+				transition: 0.5s ease
+			.navbar-collapse
+				transition: 0.5s ease
+			.logo
+				width: 80px
+				img
+					width: 100%
+		button.navbar-toggler
+			border: 1px solid $m-verde
+			background-color: $m-verde
+			transition: 0.5s ease
+			.navbar-toggler-icon
+				color: $m-verde
+		.navbar-brand
+			float: left
+			@media screen and (max-width: 760px) /*  de 760 a 0*/
+				display: none
+			img
+				width: 70px
+				transition: 0.5s ease
+				&:hover
+					opacity: 0.8
+	div.collapse
+		ul.menu
+			display: flex
+			flex-flow: column
+			flex-wrap: wrap
+			justify-content: center
+			padding: 10px 0px 10px
+			box-sizing: border-box
+			transition: 0.5s ease
+			li
+				transition: 0.5s ease
+				padding-top: 5px
+				padding-bottom: 5px
+				margin-bottom: 4px
+				padding-left: 10px
+				background-color: rgba($blanco,0.2)
+				a
+					padding: 5px 0px 5px
+					transition: 0.5s ease
+					color: $blanco
+					text-decoration: none
+					font-size: 1.125em
+					display: block
+					&:hover
+						color: $m-verde
