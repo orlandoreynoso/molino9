@@ -1,7 +1,7 @@
 <?php
 /*
-  Template Name: Agrupaciones
-  Template Post Type: page, agrupaciones
+Template Name: Contenido desglosado
+Template Post Type: post, page,
 */
  get_header();
 ?>

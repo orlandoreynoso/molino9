@@ -21,7 +21,7 @@
 		</a>
 	</div>
 	<div id="div1">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>/misioneros-del-sagrado-corazon/">
+		<a href="http://www.mscguatemala.org/la-mision-msc">
 			<img src="<?php echo IMAGES.'/misioneros.jpg'; ?>" alt="">
 			<span>Misioneros del Sagrado Corazón</span>
 		</a>
