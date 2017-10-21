@@ -20,7 +20,6 @@ Template Post Type: post, page, product, peregrinaciones
     <?php echo "Desde el single peregrinaciones"; ?>
       <div class="mapeo"><?php dimox_breadcrumbs(); ?></div>
 <!-- *********************************** -->
-
      <div class="contenido">
             <!-- div class="date-cat">
               <div class="row">
@@ -58,7 +57,7 @@ Template Post Type: post, page, product, peregrinaciones
         <img src="<?php the_field('afiche'); ?>" >
         <h2 class="p-itinerario">Galería fotográfica</h2>
         <div class="p-galeria"><?php the_content(); ?></div>
-        
+
 <?php      endwhile;         ?>
             </div>
       </div>
