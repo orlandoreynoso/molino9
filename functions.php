@@ -124,6 +124,7 @@ include (TEMPLATEPATH . '/libs/entradas.php');
 include (TEMPLATEPATH . '/libs/totop.php'); 
 include (TEMPLATEPATH . '/libs/breadcrumb.php'); 
 include (TEMPLATEPATH . '/files/bread.php');
+include (TEMPLATEPATH . '/files/paginacioncustom.php');
 
 /*==== n Widget=====*/
 if (function_exists('register_sidebar')) {
