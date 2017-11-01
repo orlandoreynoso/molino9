@@ -10,7 +10,7 @@
 <section class="con-general">
   <div class="container">
      <div class="row">
-          <div class="col-xs-12 col-md-12 con">
+        <div class="col-xs-12 col-md-8 con">
           <div class="interiores">
             <?php // echo "estoy en pagina de archivos presetanciones" ?>
             <div class="header-title">
@@ -18,55 +18,34 @@
                 <div class="mapeo"><?php dimox_breadcrumbs(); ?></div>
               </div>
               <div class="titulos-page">
-                <?php the_title(); ?>
+                <?php post_type_archive_title(); ?>
               </div>
             </div>
+
+            <?php   $pagina_id = get_the_ID();            ?>
 
             <?php
 
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
             $args = array(
+              'post_type' => 'presentaciones',
+              'posts_per_page' => 6,
+              'order' => 'DESC',
+              'orderby' => 'date',
+              'paged' => $paged,
+            );
 
-            'post_type' => 'presentaciones',
-            'posts_per_archive' => -1,
-            'posts_per_page' => 6,
-            'order' => 'DESC',
-            'orderby' => 'date',
-            'paged' => $paged
-            ); ?>
+            ?>
 
+          <?php $presentaciones = new WP_Query($args); ?>
 
-              <?php
-
-                $pagina_id = get_the_ID();
-
-
-
-
-                /*
-
-            echo $variable;
-
-            echo "<pre>";
-            var_dump($variable);
-            echo "</pre>"; */
-
-              ?>
-          <div class="agrupaciones-desglose">
+          <div class="presentaciones-desglose">
             <?php // echo "template pastorales"; ?>
-                <div class="c-agrupaciones">
-                  <?php $the_query = new WP_Query($args); ?>
-                  <?php /*
-                  <div class="titulo-pastorales">
-                  	<h3><?php $nombre = the_title(); ?></h3>
-                  </div>
-                  */  ?>
+                <div class="c-presentaciones">
 
-                              <?php if ( have_posts() ) : ?>
-
-                    <?php // $the_query = new WP_Query(get_agrupaciones(2883,-1));    ?>
-                    <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+                    <?php if ( have_posts() ) : ?>
+                    <?php while($presentaciones->have_posts() ): $presentaciones->the_post(); ?>
                     <div class="list">
                     <div class="todo">
                       <a class="ir-agrupacion" href="<?php the_permalink(); ?>">
@@ -81,38 +60,33 @@
                       <?php }
                       ?>
                       </div>
-
-                        <?php /*==============*/ ?>
                         <h5><?php the_title(); ?></h5>
+                        <?php echo get_the_title(); ?>
+                        <?php echo "<p><b>Fecha: </b>" . get_post_meta( get_the_ID(), 'info_page_fecha', true ) . "</p>"; ?>
+
                       </a>
-                      <!-- div class="exe"><?php // excerpt('15'); ?> </div -->
                     </div>
                     </div>
                   <?php endwhile; ?>
+                  <div class="navigationpresentaciones">
+                  <?php
+                  $big = 999999999; // need an unlikely integer
 
-                <?php /*
-                    <div class="navigation"><?php if(function_exists('pagenavi')) { pagenavi(); } ?></div>
-*/ ?>
+                   echo paginate_links( array(
 
-<ul class="paginacion clear">
-<?php /*
-          <li>
+                      'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+                      'format' => '?paged=%#%',
+                      'current' => max( 1, get_query_var('paged') ),
+                      'total' => $presentaciones->max_num_pages
 
-            <?php
+                  ) );
 
-                if (function_exists(custom_pagination)) {
-
-                  custom_pagination($pastorales->max_num_pages,"",$paged);
-
-                }
-
-            ?>
-
-          </li>
-      </ul>
-*/ ?>
-<div class="navigation"><?php if(function_exists('pagenavi')) { pagenavi(); } ?></div>
+                   ?>
+                   </div>
                   <?php wp_reset_postdata(); ?>
+                  <?php /*
+                  <div class="navigation"><?php if(function_exists('pagenavi')) { pagenavi(); } ?></div>
+                  */ ?>
                     <?php else : ?>
 
                     <p><?php _e('Ups!, no hay entradas.'); ?></p>
@@ -128,7 +102,19 @@
               endwhile;  */
             ?>
           </div>
+       </div><!-- FINALIZA DIV DE CONTENIDOS  -->
+
+       <div class="col-xs-12 col-md-4 side">
+         <div class="entradas">
+           <div class="titulo_entradas">
+             <h3>Entradas recientes</h3>
+           </div>
+           <div class="recientes">
+             <?php get_sidebar(); ?>
+           </div>
+         </div>
        </div>
+
     </div>
   </div>
 </section>

@@ -1,0 +1,59 @@
+.presentaciones-desglose
+	box-sizing: border-box
+	.c-presentaciones
+		display: flex
+		flex-flow: row wrap
+		width: 100%
+		box-sizing: border-box
+		padding: 10px
+		.titulo-pastorales
+			@include tituloafter($m-azul,$m-rojo)
+		.list
+			box-sizing: border-box
+			width: calc(var(--sizem)/3)
+			text-align: center
+			margin-bottom: 12px
+			@media screen and (max-width: 640px)
+				width: 100%
+			@media screen and (max-width: 768px)
+				width: 33%
+			@media screen and (max-width: 480px)
+				width: 100%
+			@media screen and (max-width: 360px)
+				width: 100%
+			.todo
+				width: 100%
+				height: 100%
+				transition: 0.5s ease
+				overflow: hidden
+				padding-bottom: 10px
+				box-sizing: border-box
+				border: 1px solid $blanco
+				&:hover
+					border-bottom: 1px solid $m-verde
+				.ir-agrupacion
+					padding: 5px 5px 10px 5px
+					display: block
+					text-decoration: none
+					transition: 0.5s ease
+					&:hover
+						color: $celeste
+						h5
+							color: $celeste
+					h5
+						font-size: 1em
+						line-height: 1.5em
+						font-family: 'Open Sans', Arial, sans-serif
+						margin-left: 5px
+						font-weight: 600
+						color: $m-verde
+					.thumb
+						width: 100%
+						height: 180px
+						display: block
+						@include m_img
+						@media screen and (max-width: 640px)
+							height: auto
+							width: 100%
+				.exe
+					margin-top: 10px
