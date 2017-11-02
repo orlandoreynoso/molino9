@@ -22,7 +22,11 @@
               </div>
             </div>
 
-            <?php   $pagina_id = get_the_ID();            ?>
+            <?php   $pagina_id = get_the_ID();
+
+
+
+               ?>
 
             <?php
 
@@ -43,12 +47,16 @@
           <div class="presentaciones-desglose">
             <?php // echo "template pastorales"; ?>
                 <div class="c-presentaciones">
+<?php
 
+
+
+                  ?>
                     <?php if ( have_posts() ) : ?>
                     <?php while($presentaciones->have_posts() ): $presentaciones->the_post(); ?>
                     <div class="list">
                     <div class="todo">
-                      <a class="ir-agrupacion" href="<?php the_permalink(); ?>">
+                      <a class="enlace" href="<?php the_permalink(); ?>">
                         <div class="thumb" >
                       <?php /*==============*/
 
@@ -60,10 +68,24 @@
                       <?php }
                       ?>
                       </div>
-                        <h5><?php the_title(); ?></h5>
-                        <?php echo get_the_title(); ?>
-                        <?php echo "<p><b>Fecha: </b>" . get_post_meta( get_the_ID(), 'info_page_fecha', true ) . "</p>"; ?>
-
+                      <div class="textos">
+                        <div class="titulo">
+                          <h3><?php
+                          // the_title();
+                            $titulo = get_the_title();
+                            $nuevo_titulo = wp_trim_words( $titulo, 12, '...' );
+                            echo $nuevo_titulo;
+                           ?></h3>
+                        </div>
+                        <div class="cuadro-fecha">
+                          <span class="titulo-fecha">
+                            Presentación &raquo;
+                          </span>
+                          <span class="fecha">
+                            <?php echo "" . get_post_meta( get_the_ID(), 'info_page_fecha', true ) . ""; ?>
+                          </span>
+                        </div>
+                      </div>
                       </a>
                     </div>
                     </div>
@@ -84,23 +106,12 @@
                    ?>
                    </div>
                   <?php wp_reset_postdata(); ?>
-                  <?php /*
-                  <div class="navigation"><?php if(function_exists('pagenavi')) { pagenavi(); } ?></div>
-                  */ ?>
                     <?php else : ?>
-
                     <p><?php _e('Ups!, no hay entradas.'); ?></p>
-
                     <?php endif; ?>
 
                 </div>
           </div>
-            <?php //  echo  'estoy en page';      ?>
-            <?php /*
-              while ( have_posts() ) : the_post();
-                the_content();
-              endwhile;  */
-            ?>
           </div>
        </div><!-- FINALIZA DIV DE CONTENIDOS  -->
 

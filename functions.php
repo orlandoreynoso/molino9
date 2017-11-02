@@ -10,6 +10,7 @@ add_theme_support('post-thumbnails');
 /*========== incluyendo los estilo que uso ===============*/
 
 include (TEMPLATEPATH. '/inc/estilos.php');
+include (TEMPLATEPATH. '/inc/filtros.php');
 
 //add_image_size( $name, $width, $height, $crop );
 the_post_thumbnail('thumbnail',1024,1024,true);       // Tamaño de la miniatura 150x150 píxeles 

@@ -21,6 +21,9 @@
 				width: 100%
 			@media screen and (max-width: 360px)
 				width: 100%
+.presentaciones-desglose
+	.c-presentaciones
+		.list
 			.todo
 				width: 100%
 				height: 100%
@@ -31,22 +34,21 @@
 				border: 1px solid $blanco
 				&:hover
 					border-bottom: 1px solid $m-verde
-				.ir-agrupacion
+.presentaciones-desglose
+	.c-presentaciones
+		.list
+			.todo
+				.enlace
 					padding: 5px 5px 10px 5px
 					display: block
 					text-decoration: none
 					transition: 0.5s ease
+					position: relative
 					&:hover
-						color: $celeste
-						h5
-							color: $celeste
-					h5
-						font-size: 1em
-						line-height: 1.5em
-						font-family: 'Open Sans', Arial, sans-serif
-						margin-left: 5px
-						font-weight: 600
-						color: $m-verde
+						.textos
+							.titulo
+								h3
+									color: $m-rojo
 					.thumb
 						width: 100%
 						height: 180px
@@ -55,5 +57,51 @@
 						@media screen and (max-width: 640px)
 							height: auto
 							width: 100%
+					.textos
+						padding-top: 5px
+						padding-bottom: 5px
+						display: flex
+						justify-content: center
+						align-items: center
+						flex-direction: row
+						flex-wrap: wrap
+						font-family: 'Oswald', sans-serif
+						background-color: $m-azul
+						.titulo
+							width: 100%
+							box-sizing: border-box
+							padding-top: 10px
+							height: 100%
+							padding-bottom: 10px
+							h3
+								min-height: 70px
+								font-size: 1em
+								line-height: 1.5em
+								vertical-align: middle
+								height: 100%
+								color: $blanco
+								width: 100%
+								display: block
+								padding: 5px
+								margin-top: 5px
+								height: 100%
+								box-sizing: border-box
+								display: flex
+								flex-flow: row wrap
+								justify-content: center
+								align-items: center
+								&:hover
+									color: $m-rojo
+									transition: 0.5s ease
+						.cuadro-fecha
+							width: 100%
+							display: flex
+							justify-content: space-between
+							flex-flow: row wrap
+							.titulo-fecha
+								color: $celeste
+							.fecha
+								text-transform: capitalize
+								color: $m-rojo
 				.exe
 					margin-top: 10px
