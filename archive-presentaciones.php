@@ -74,7 +74,7 @@
                           // the_title();
                             $titulo = get_the_title();
                             $nuevo_titulo = wp_trim_words( $titulo, 12, '...' );
-                            echo $nuevo_titulo;
+                            echo '"'.$nuevo_titulo.'"';
                            ?></h3>
                         </div>
                         <div class="cuadro-fecha">
@@ -121,7 +121,7 @@
              <h3>Entradas recientes</h3>
            </div>
            <div class="recientes">
-             <?php get_sidebar(); ?>
+             <?php get_sidebar('full'); ?>
            </div>
          </div>
        </div>

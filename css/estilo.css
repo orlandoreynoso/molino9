@@ -1411,11 +1411,13 @@ input[type=number]::-webkit-outer-spin-button {
   transition: 0.5s ease;
   position: relative; }
   .presentaciones-desglose .c-presentaciones .list .todo .enlace:hover .textos .titulo h3 {
-    color: #b20013; }
+    color: #fcf7bf; }
   .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb {
     width: 100%;
     height: 180px;
-    display: block; }
+    display: block;
+    overflow: hidden;
+    transition: 0.92s ease; }
     .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb img {
       width: 100%;
       height: 100%;
@@ -1432,6 +1434,11 @@ input[type=number]::-webkit-outer-spin-button {
         opacity: 0.7;
         -khml-opacity: 1;
         transition: 0.5s ease; }
+    .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb img {
+      transition: 0.92s ease; }
+    .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb img:hover {
+      transform: scale(1.5);
+      transition: 0.92s ease; }
     @media screen and (max-width: 640px) {
       .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb {
         height: auto;
@@ -1470,18 +1477,22 @@ input[type=number]::-webkit-outer-spin-button {
         justify-content: center;
         align-items: center; }
         .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .titulo h3:hover {
-          color: #b20013;
+          color: #fcf7bf;
           transition: 0.5s ease; }
     .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .cuadro-fecha {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      flex-flow: row wrap; }
+      flex-flow: row wrap;
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 0.85em;
+      text-transform: uppercase; }
       .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .cuadro-fecha .titulo-fecha {
-        color: #009FFF; }
+        color: #fcf7bf; }
       .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .cuadro-fecha .fecha {
-        text-transform: capitalize;
-        color: #b20013; }
+        color: #fcf7bf; }
 .presentaciones-desglose .c-presentaciones .list .todo .exe {
   margin-top: 10px; }
 

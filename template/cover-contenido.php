@@ -8,7 +8,8 @@
           <?php
             ContenidoHijoPost(1294,1); /*Reflexiones Sacerdotales*/
             contenidoPaginaPorNombre('conozca-guatemala');
-            ContenidoHijoPost(692,1); /* Presentaciones */
+          //  ContenidoHijoPost(692,1); /* Presentaciones */
+            ContenidoHijoCPT('presentaciones',1); /* Presentaciones */
             contenidoPaginaPorNombre('atrio');
           ?>
       </article>
