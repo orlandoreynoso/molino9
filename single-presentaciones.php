@@ -28,8 +28,16 @@ Template Post Type: post, page, product, peregrinaciones
             <?php
               while ( have_posts() ) : the_post();
                 the_content();
-            echo "<p><b>Presentación del mes de: </b>" . get_post_meta( get_the_ID(), 'msc_campos_presentaciones_mes', true ) . "</p>";
-
+                ?>
+                <div class="cuadro-fecha">
+                  <span class="titulo-fecha">
+                    Presentación &raquo;
+                  </span>
+                  <span class="fecha">
+                    <?php echo "" . get_post_meta( get_the_ID(), 'info_page_fecha', true ) . ""; ?>
+                  </span>
+                </div>
+          <?php
               endwhile;
             ?>
           </div>

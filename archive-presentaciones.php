@@ -10,7 +10,7 @@
 <section class="con-general">
   <div class="container">
      <div class="row">
-        <div class="col-xs-12 col-md-8 con">
+        <div class="col-xs-12 col-md-12 con">
           <div class="interiores">
             <?php // echo "estoy en pagina de archivos presetanciones" ?>
             <div class="header-title">
@@ -30,11 +30,11 @@
 
             <?php
 
-            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+          //  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
             $args = array(
               'post_type' => 'presentaciones',
-              'posts_per_page' => 6,
+              'posts_per_page' => -1,
               'order' => 'DESC',
               'orderby' => 'date',
               'paged' => $paged,
@@ -90,8 +90,9 @@
                     </div>
                     </div>
                   <?php endwhile; ?>
-                  <div class="navigationpresentaciones">
+                  <!-- div class="navigationpresentaciones" -->
                   <?php
+                  /*
                   $big = 999999999; // need an unlikely integer
 
                    echo paginate_links( array(
@@ -102,9 +103,45 @@
                       'total' => $presentaciones->max_num_pages
 
                   ) );
+*/
+/*
+function pagination_bar( $custom_query ) {
 
+    $total_pages = $custom_query->max_num_pages;
+    $big = 999999999; // need an unlikely integer
+
+    if ($total_pages > 1){
+        $current_page = max(1, get_query_var('paged'));
+
+        echo paginate_links(array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => $current_page,
+            'total' => $total_pages,
+        ));
+    }
+}
+
+pagination_bar( $presentaciones ); */
+/*
+$total_pages = $loop->max_num_pages;
+
+   if ($total_pages > 1){
+
+       $current_page = max(1, get_query_var('paged'));
+
+       echo paginate_links(array(
+           'base' => get_pagenum_link(1) . '%_%',
+           'format' => '/page/%#%',
+           'current' => $current_page,
+           'total' => $total_pages,
+           'prev_text'    => __('« prev'),
+           'next_text'    => __('next »'),
+       ));
+   }
+*/
                    ?>
-                   </div>
+                   <!-- /div -->
                   <?php wp_reset_postdata(); ?>
                     <?php else : ?>
                     <p><?php _e('Ups!, no hay entradas.'); ?></p>
@@ -114,7 +151,7 @@
           </div>
           </div>
        </div><!-- FINALIZA DIV DE CONTENIDOS  -->
-
+<?php /*
        <div class="col-xs-12 col-md-4 side">
          <div class="entradas">
            <div class="titulo_entradas">
@@ -125,7 +162,7 @@
            </div>
          </div>
        </div>
-
+*/ ?>
     </div>
   </div>
 </section>
