@@ -10,7 +10,7 @@
 <section class="con-general">
   <div class="container">
      <div class="row">
-        <div class="col-xs-12 col-md-12 con">
+        <div class="col-xs-12 col-md-8 con">
           <div class="interiores">
             <?php // echo "estoy en pagina de archivos presetanciones" ?>
             <div class="header-title">
@@ -30,13 +30,14 @@
 
             <?php
 
-          //  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+            $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
             $args = array(
               'post_type' => 'presentaciones',
-              'posts_per_page' => -1,
-              'order' => 'DESC',
+              'post_status' => 'publish',
               'orderby' => 'date',
+              'order' => 'DESC',
+//              'posts_per_page' => 4,
               'paged' => $paged,
             );
 
@@ -90,7 +91,13 @@
                     </div>
                     </div>
                   <?php endwhile; ?>
-                  <!-- div class="navigationpresentaciones" -->
+                  <div class="navigationpresentaciones">
+                    <?php if (function_exists(custom_pagination)) { ?>
+                    	<div class="col-sm-12 inner-sm">
+                    		<?php custom_pagination_msc($my_query->max_num_pages, "", $paged); ?>
+                    	</div>
+                    <?php } ?>
+                  </div>
                   <?php
                   /*
                   $big = 999999999; // need an unlikely integer
@@ -141,7 +148,6 @@ $total_pages = $loop->max_num_pages;
    }
 */
                    ?>
-                   <!-- /div -->
                   <?php wp_reset_postdata(); ?>
                     <?php else : ?>
                     <p><?php _e('Ups!, no hay entradas.'); ?></p>
@@ -151,7 +157,7 @@ $total_pages = $loop->max_num_pages;
           </div>
           </div>
        </div><!-- FINALIZA DIV DE CONTENIDOS  -->
-<?php /*
+
        <div class="col-xs-12 col-md-4 side">
          <div class="entradas">
            <div class="titulo_entradas">
@@ -162,7 +168,6 @@ $total_pages = $loop->max_num_pages;
            </div>
          </div>
        </div>
-*/ ?>
     </div>
   </div>
 </section>
