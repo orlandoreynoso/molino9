@@ -56,7 +56,17 @@ if ( $the_query->have_posts() ) {
     else{ ?>
       <img class="attachment-medium size-medium wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/pluma.jpg" alt="">
     <?php }       ?>
-    <div class="texto"><span><?php the_title(); ?></span></div>
+    <div class="texto"><span>
+      <?php
+
+     //the_title();
+
+
+     $titulo = get_the_title();
+     $nuevo_titulo = wp_trim_words( $titulo, 12, '...' );
+     echo $nuevo_titulo;
+
+    ?></span></div>
   </a>
 </div>
         <?php }} else {
@@ -89,6 +99,46 @@ function ContenidoHijoPost($page,$perpage){
     <?php
       endwhile;
 }
+
+
+/*============== llamar por post type===============*/
+function create_page_cpt($pagina,$perpage){
+  $args = array(
+    'post_type' => $pagina,
+    'posts_per_page' => $perpage,
+    'order' => 'DESC',
+    'orderby' => 'date'
+  );
+  return $args;
+}
+
+function ContenidoHijoCPT($page,$perpage){
+    ?>
+    <?php
+    $the_query = new WP_Query(create_page_cpt($page,$perpage));
+        $id = get_permalink($page);
+        $title = get_the_title($page); /**/
+         while($the_query->have_posts()) : $the_query->the_post();  ?>
+        <div class="lista">
+            <a class="thumb" href="<?php the_permalink(); ?>">
+              <?php
+              if(has_post_thumbnail()){
+                the_post_thumbnail('full');
+              }
+              else{ ?>
+                <img class="attachment-medium size-medium wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/pluma.jpg" alt="">
+              <?php }
+              ?>
+              <div class="texto"><span><?php echo $page; ?></span></div>
+            </a>
+            <!-- div class="exe"><?php // excerpt('20'); ?> </div -->
+        </div>
+    <?php
+      endwhile;
+}
+
+
+/*=======================================================*/
 
 function contenidoPaginaPorNombre($pagename){
     ?>

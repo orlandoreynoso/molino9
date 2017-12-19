@@ -28,7 +28,7 @@ function estilos_template(){
   wp_register_script('lightbox', get_template_directory_uri().'/js/lightbox.js', array('jquery'),'2.9.0', true);
 
 	wp_enqueue_script('jquery');
-	//wp_enqueue_script('analitics');
+	wp_enqueue_script('analitics');
   wp_enqueue_script('popper');
 	wp_enqueue_script('bootstrapjs');
 	wp_enqueue_script('scripts');

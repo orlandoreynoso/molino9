@@ -1,7 +1,7 @@
 <?php
 /*
-  Template Name: Agrupaciones
-  Template Post Type: page, agrupaciones
+  Template Name: Contenido y desglose
+  Template Post Type: post, page, product, agrupaciones
 */
  get_header();
 ?>
@@ -18,6 +18,16 @@
                 <?php the_title(); ?>
               </div>
             </div>
+
+            <div class="interiores">
+              <?php //  echo  'estoy en page';      ?>
+              <?php
+                while ( have_posts() ) : the_post();
+                  the_content();
+                endwhile;
+              ?>
+            </div>
+
               <?php
 
                 $pagina_id = get_the_ID();
@@ -30,6 +40,7 @@
             echo "</pre>"; */
 
               ?>
+          <h3>Contenido de interés</h3>
           <div class="agrupaciones-desglose">
             <?php // echo "template pastorales"; ?>
                 <div class="c-agrupaciones">

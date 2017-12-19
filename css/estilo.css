@@ -1028,6 +1028,28 @@ input[type=number]::-webkit-outer-spin-button {
         background-color: #ffffff;
         transition: 0.5s ease; }
 
+.navigationpresentaciones {
+  background-color: #46b271;
+  padding: 7px;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .navigationpresentaciones a {
+    text-decoration: none; }
+  .navigationpresentaciones span.current {
+    color: #ffffff;
+    background-color: #293449;
+    padding: 3px;
+    margin: 2px; }
+  .navigationpresentaciones a.page-numbers {
+    color: #293449;
+    background-color: #f2f2f2;
+    padding: 3px;
+    margin: 2px; }
+    .navigationpresentaciones a.page-numbers:hover {
+      color: #46b271;
+      transition: 0.5s ease; }
+
 .agrupaciones-desglose {
   box-sizing: border-box; }
   .agrupaciones-desglose .c-agrupaciones {
@@ -1323,6 +1345,157 @@ input[type=number]::-webkit-outer-spin-button {
             .interior-horarios-misa .contenidos .agrupaciones-desglose .c-agrupaciones .list {
               width: var(--sizem); } }
 
+.presentaciones-desglose {
+  box-sizing: border-box; }
+  .presentaciones-desglose .c-presentaciones {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px; }
+    .presentaciones-desglose .c-presentaciones .titulo-pastorales {
+      padding: 10px;
+      width: var(--sizem);
+      text-align: center;
+      box-sizing: border-box;
+      margin-bottom: 30px; }
+      .presentaciones-desglose .c-presentaciones .titulo-pastorales h3 {
+        position: relative;
+        margin: auto;
+        --width: 20%;
+        color: #293449;
+        font-weight: bold; }
+        .presentaciones-desglose .c-presentaciones .titulo-pastorales h3::after {
+          content: "";
+          display: block;
+          height: 3px;
+          width: calc(var(--width)/2);
+          position: absolute;
+          left: calc( calc( 100% - ( calc(var(--width)/2)) ) / 2 );
+          bottom: -0.8em;
+          background-color: #b20013;
+          z-index: 100; }
+    .presentaciones-desglose .c-presentaciones .list {
+      box-sizing: border-box;
+      width: calc(var(--sizem)/3);
+      text-align: center;
+      margin-bottom: 12px; }
+      @media screen and (max-width: 640px) {
+        .presentaciones-desglose .c-presentaciones .list {
+          width: 100%; } }
+      @media screen and (max-width: 768px) {
+        .presentaciones-desglose .c-presentaciones .list {
+          width: 33%; } }
+      @media screen and (max-width: 480px) {
+        .presentaciones-desglose .c-presentaciones .list {
+          width: 100%; } }
+      @media screen and (max-width: 360px) {
+        .presentaciones-desglose .c-presentaciones .list {
+          width: 100%; } }
+
+.presentaciones-desglose .c-presentaciones .list .todo {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  overflow: hidden;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff; }
+  .presentaciones-desglose .c-presentaciones .list .todo:hover {
+    border-bottom: 1px solid #46b271; }
+
+.presentaciones-desglose .c-presentaciones .list .todo .enlace {
+  padding: 5px 5px 10px 5px;
+  display: block;
+  text-decoration: none;
+  transition: 0.5s ease;
+  position: relative; }
+  .presentaciones-desglose .c-presentaciones .list .todo .enlace:hover .textos .titulo h3 {
+    color: #fcf7bf; }
+  .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb {
+    width: 100%;
+    height: 180px;
+    display: block;
+    overflow: hidden;
+    transition: 0.92s ease; }
+    .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb img {
+      width: 100%;
+      height: 100%;
+      margin: 0px auto;
+      text-align: center;
+      vertical-align: top;
+      display: block; }
+      @media screen and (max-width: 640px) {
+        .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb img {
+          height: auto; } }
+      .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb img:hover {
+        filter: alpha(opacity=70);
+        -moz-opacity: 1;
+        opacity: 0.7;
+        -khml-opacity: 1;
+        transition: 0.5s ease; }
+    .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb img {
+      transition: 0.92s ease; }
+    .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb img:hover {
+      transform: scale(1.5);
+      transition: 0.92s ease; }
+    @media screen and (max-width: 640px) {
+      .presentaciones-desglose .c-presentaciones .list .todo .enlace .thumb {
+        height: auto;
+        width: 100%; } }
+  .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: "Oswald", sans-serif;
+    background-color: #293449; }
+    .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .titulo {
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: 10px;
+      height: 100%;
+      padding-bottom: 10px; }
+      .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .titulo h3 {
+        min-height: 70px;
+        font-size: 1em;
+        line-height: 1.5em;
+        vertical-align: middle;
+        height: 100%;
+        color: #ffffff;
+        width: 100%;
+        display: block;
+        padding: 5px;
+        margin-top: 5px;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center; }
+        .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .titulo h3:hover {
+          color: #fcf7bf;
+          transition: 0.5s ease; }
+    .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .cuadro-fecha {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 0.85em;
+      text-transform: uppercase; }
+      .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .cuadro-fecha .titulo-fecha {
+        color: #fcf7bf; }
+      .presentaciones-desglose .c-presentaciones .list .todo .enlace .textos .cuadro-fecha .fecha {
+        color: #fcf7bf; }
+.presentaciones-desglose .c-presentaciones .list .todo .exe {
+  margin-top: 10px; }
+
 #totop {
   display: none;
   text-decoration: none;
@@ -1363,5 +1536,7 @@ footer {
         footer #pie .group a:hover {
           color: #009FFF;
           transition: 0.5s ease; }
+
+/*================================= */
 
 /*# sourceMappingURL=estilo.css.map */

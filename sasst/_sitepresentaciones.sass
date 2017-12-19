@@ -1,0 +1,119 @@
+.presentaciones-desglose
+	box-sizing: border-box
+	.c-presentaciones
+		display: flex
+		flex-flow: row wrap
+		width: 100%
+		box-sizing: border-box
+		padding: 10px
+		.titulo-pastorales
+			@include tituloafter($m-azul,$m-rojo)
+		.list
+			box-sizing: border-box
+			width: calc(var(--sizem)/3)
+			text-align: center
+			margin-bottom: 12px
+			@media screen and (max-width: 640px)
+				width: 100%
+			@media screen and (max-width: 768px)
+				width: 33%
+			@media screen and (max-width: 480px)
+				width: 100%
+			@media screen and (max-width: 360px)
+				width: 100%
+.presentaciones-desglose
+	.c-presentaciones
+		.list
+			.todo
+				width: 100%
+				height: 100%
+				transition: 0.5s ease
+				overflow: hidden
+				padding-bottom: 10px
+				box-sizing: border-box
+				border: 1px solid $blanco
+				&:hover
+					border-bottom: 1px solid $m-verde
+.presentaciones-desglose
+	.c-presentaciones
+		.list
+			.todo
+				.enlace
+					padding: 5px 5px 10px 5px
+					display: block
+					text-decoration: none
+					transition: 0.5s ease
+					position: relative
+					&:hover
+						.textos
+							.titulo
+								h3
+									color: $m-hueso
+					.thumb
+						width: 100%
+						height: 180px
+						display: block
+						overflow: hidden
+						transition: 0.92s ease
+						@include m_img
+						img
+							transition: 0.92s ease
+						img
+							&:hover
+								transform: scale(1.5)
+								transition: 0.92s ease
+						@media screen and (max-width: 640px)
+							height: auto
+							width: 100%
+					.textos
+						padding-top: 5px
+						padding-bottom: 5px
+						display: flex
+						justify-content: center
+						align-items: center
+						flex-direction: row
+						flex-wrap: wrap
+						font-family: 'Oswald', sans-serif
+						background-color: $m-azul
+						.titulo
+							width: 100%
+							box-sizing: border-box
+							padding-top: 10px
+							height: 100%
+							padding-bottom: 10px
+							h3
+								min-height: 70px
+								font-size: 1em
+								line-height: 1.5em
+								vertical-align: middle
+								height: 100%
+								color: $blanco
+								width: 100%
+								display: block
+								padding: 5px
+								margin-top: 5px
+								height: 100%
+								box-sizing: border-box
+								display: flex
+								flex-flow: row wrap
+								justify-content: center
+								align-items: center
+								&:hover
+									color: $m-hueso
+									transition: 0.5s ease
+						.cuadro-fecha
+							width: 100%
+							display: flex
+							justify-content: space-between
+							flex-flow: row wrap
+							box-sizing: border-box
+							padding-left: 10px
+							padding-right: 10px
+							font-size: 0.85em
+							text-transform: uppercase
+							.titulo-fecha
+								color: $m-hueso
+							.fecha
+								color: $m-hueso
+				.exe
+					margin-top: 10px

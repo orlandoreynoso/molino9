@@ -86,6 +86,8 @@ if ( $the_query->have_posts() ) {
 /* Restore original Post Data */
  wp_reset_postdata();
 }
+
+/*===================================*/
 function obtener_categoria($nombre,$id){    ?>
     <div id="titulo_<?php echo $id; ?>">
         <div id="name_cat">
@@ -129,6 +131,9 @@ function create_page_two($pagina, $perpage){
     );
     return $args;
 }
+
+
+
 /*==================================*/
 function get_laterales($pagina,$perpage, $titulo, $clase){
     ?>
